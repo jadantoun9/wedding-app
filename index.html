@@ -1,19 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mira &amp; Azmi — We're Getting Married</title>
-  <meta name="description" content="This invitation is exclusively for you." />
+  <title>ميرا وعزمي — سنتزوّج</title>
+  <meta name="description" content="هذه الدعوة لكم خصيصاً" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Pinyon+Script&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root{
-      --bg:#f1ece1;            /* ivory       */
-      --bg-2:#f7f3ea;          /* lighter ivory */
+      --bg:#f1ece1;
+      --bg-2:#f7f3ea;
       --paper:#faf7ef;
       --cream:#cfc9b0;
       --sage:#6f7458;
@@ -24,16 +24,18 @@
       --ink:#4a4f38;
       --muted:#7d8166;
 
-      --f-disp:"Cormorant Garamond", Georgia, serif;
-      --f-script:"Pinyon Script", cursive;
-      --f-body:"Jost", system-ui, sans-serif;
+      --f-disp:"Aref Ruqaa", "Amiri", serif;
+      --f-script:"Aref Ruqaa", "Amiri", serif;
+      --f-body:"El Messiri", system-ui, sans-serif;
       --shadow:0 26px 70px -34px rgba(45,52,33,.55);
     }
     *{box-sizing:border-box;margin:0;padding:0}
+    /* Arabic is cursive — letter-spacing would break the joined letters */
+    *{letter-spacing:normal !important}
     html{scroll-behavior:smooth}
     body{
-      font-family:var(--f-body);color:var(--ink);line-height:1.7;overflow-x:hidden;
-      -webkit-font-smoothing:antialiased;font-weight:300;
+      font-family:var(--f-body);color:var(--ink);line-height:1.8;overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;font-weight:400;
       background:linear-gradient(125deg,#f3eee3,#efe8d9,#f5efe3,#ece5d4);
       background-size:400% 400%;animation:bgShift 28s ease-in-out infinite;
     }
@@ -63,12 +65,12 @@
     }
 
     /* ---------- shared type ---------- */
-    .eyebrow{font-family:var(--f-body);font-size:.7rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);font-weight:400}
-    .script{font-family:var(--f-script);color:var(--sage-dk);line-height:1}
-    .stitle{font-family:var(--f-disp);font-weight:400;font-size:clamp(2.4rem,6vw,3.6rem);letter-spacing:.015em;color:var(--sage-dk);line-height:1.05}
+    .eyebrow{font-family:var(--f-body);font-size:.82rem;color:var(--gold);font-weight:500}
+    .script{font-family:var(--f-script);color:var(--sage-dk);line-height:1.2}
+    .stitle{font-family:var(--f-disp);font-weight:700;font-size:clamp(2.2rem,5.5vw,3.4rem);color:var(--sage-dk);line-height:1.2}
     .lead{color:var(--muted);max-width:560px;margin:18px auto 0}
     .section-head{text-align:center;margin-bottom:62px}
-    .section-head .eyebrow{display:block;margin-bottom:18px}
+    .section-head .eyebrow{display:block;margin-bottom:16px}
 
     .flourish{display:flex;align-items:center;justify-content:center;gap:16px;margin:22px auto 0;max-width:300px;color:var(--gold)}
     .flourish .line{height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold-lt),var(--gold),var(--gold-lt),transparent);background-size:220% 100%;animation:shimmer 5.5s linear infinite}
@@ -95,24 +97,24 @@
                  radial-gradient(120% 80% at 50% 115%, rgba(74,79,56,.14), transparent 55%);
     }
     .hero-inner{position:relative;z-index:2;will-change:transform}
-    .crest{width:118px;height:118px;margin:0 auto 26px;position:relative;display:flex;align-items:center;justify-content:center;opacity:0;animation:scaleIn 1.1s .1s ease both,floatY 6s 1.2s ease-in-out infinite}
+    .crest{width:122px;height:122px;margin:0 auto 26px;position:relative;display:flex;align-items:center;justify-content:center;opacity:0;animation:scaleIn 1.1s .1s ease both,floatY 6s 1.2s ease-in-out infinite}
     .crest .ring{position:absolute;inset:0;border:1px solid var(--gold-lt);border-radius:50%}
     .crest .ring.spin{inset:-9px;border-style:dashed;border-color:rgba(184,145,80,.4);animation:spinSlow 40s linear infinite}
     .crest .ring.inner{inset:9px;opacity:.55}
-    .crest .mono{font-family:var(--f-disp);font-size:1.9rem;letter-spacing:.04em;color:var(--sage-dk)}
+    .crest .mono{font-family:var(--f-disp);font-size:1.7rem;color:var(--sage-dk)}
     .crest .mono .amp{color:var(--gold)}
-    .hero .eyebrow{margin-bottom:26px;display:block;opacity:0;animation:fadeUp 1s .35s ease both}
-    .hero-names{font-family:var(--f-script);font-size:clamp(4rem,15vw,9.5rem);color:var(--sage-dk);margin:2px 0 6px;line-height:.95;opacity:0;animation:blurIn 1.4s .55s ease both}
-    .hero-names .amp{color:var(--gold)}
-    .hero-sub{font-family:var(--f-disp);font-size:clamp(1.15rem,2.6vw,1.6rem);letter-spacing:.34em;text-transform:uppercase;color:var(--sage);margin-top:14px;opacity:0;animation:fadeUp 1s .95s ease both}
-    .hero-venue{margin-top:12px;font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);opacity:0;animation:fadeUp 1s 1.15s ease both}
+    .hero .eyebrow{margin-bottom:24px;display:block;opacity:0;animation:fadeUp 1s .35s ease both}
+    .hero-names{font-family:var(--f-script);font-weight:700;font-size:clamp(3.4rem,12vw,8rem);color:var(--sage-dk);margin:2px 0 6px;line-height:1.15;opacity:0;animation:blurIn 1.4s .55s ease both}
+    .hero-names .amp{color:var(--gold);margin:0 .14em}
+    .hero-sub{font-family:var(--f-disp);font-size:clamp(1.3rem,3vw,1.9rem);color:var(--sage);margin-top:14px;opacity:0;animation:fadeUp 1s .95s ease both}
+    .hero-venue{margin-top:10px;font-size:.96rem;color:var(--muted);opacity:0;animation:fadeUp 1s 1.15s ease both}
 
-    .countdown{display:flex;justify-content:center;margin-top:54px;flex-wrap:wrap;opacity:0;animation:fadeUp 1s 1.4s ease both}
+    .countdown{display:flex;justify-content:center;margin-top:50px;flex-wrap:wrap;opacity:0;animation:fadeUp 1s 1.4s ease both}
     .cd{padding:0 26px;position:relative}
     .cd+.cd::before{content:"";position:absolute;left:0;top:14%;height:72%;width:1px;background:var(--gold-lt);opacity:.6}
-    .cd-num{font-family:var(--f-disp);font-size:clamp(2.4rem,6vw,3.3rem);font-weight:500;color:var(--sage-dk);line-height:1;display:inline-block}
+    .cd-num{font-family:var(--f-disp);font-size:clamp(2.4rem,6vw,3.3rem);font-weight:700;color:var(--sage-dk);line-height:1;display:inline-block}
     .cd-num.tickk{animation:pulseNum .6s ease}
-    .cd-lab{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-top:10px}
+    .cd-lab{font-size:.82rem;color:var(--gold);margin-top:10px}
     @media (max-width:640px){.cd{padding:0 16px}}
 
     .scroll-cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:var(--gold);z-index:2;animation:bob 2.4s ease-in-out infinite,fadeIn 1s 1.8s ease both}
@@ -133,7 +135,7 @@
 
     /* ---------- QUOTE ---------- */
     .quote{text-align:center}
-    .quote p{font-family:var(--f-disp);font-style:italic;font-weight:300;font-size:clamp(1.5rem,3.6vw,2.2rem);color:var(--sage-dk);max-width:720px;margin:0 auto;line-height:1.5}
+    .quote p{font-family:var(--f-disp);font-weight:400;font-size:clamp(1.4rem,3.4vw,2.1rem);color:var(--sage-dk);max-width:760px;margin:0 auto;line-height:1.8}
     .quote .by{display:block;margin-top:22px;font-family:var(--f-script);font-size:2rem;color:var(--gold)}
 
     /* ---------- PHOTO FRAME ---------- */
@@ -144,39 +146,39 @@
       background:radial-gradient(120% 90% at 50% 0%, rgba(207,201,176,.5), transparent 60%),linear-gradient(160deg,#e9e3d2,#d8d2bd);
       color:var(--sage);text-align:center;padding:30px}
     .frame .ph svg{width:54px;height:54px;color:var(--gold);opacity:.8;animation:floatY 5s ease-in-out infinite}
-    .frame .ph .t{font-family:var(--f-disp);font-size:1.5rem;color:var(--sage-dk)}
-    .frame .ph .s{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);max-width:240px}
+    .frame .ph .t{font-family:var(--f-disp);font-weight:700;font-size:1.6rem;color:var(--sage-dk)}
+    .frame .ph .s{font-size:.86rem;color:var(--muted);max-width:260px}
 
     /* ---------- DETAILS card ---------- */
     .card{max-width:600px;margin:0 auto;text-align:center;background:var(--paper);padding:60px 46px;position:relative;box-shadow:var(--shadow);border:1px solid rgba(184,145,80,.32)}
     .card::before{content:"";position:absolute;inset:12px;border:1px solid rgba(184,145,80,.4);pointer-events:none}
-    .card .venue{font-family:var(--f-disp);font-size:2.3rem;color:var(--sage-dk);margin-bottom:4px}
-    .card .loc{color:var(--muted);letter-spacing:.16em;text-transform:uppercase;font-size:.74rem}
-    .card .when{margin-top:26px;font-family:var(--f-disp);font-size:1.5rem;color:var(--sage)}
-    .card .when small{display:block;font-family:var(--f-body);font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+    .card .venue{font-family:var(--f-disp);font-weight:700;font-size:2.2rem;color:var(--sage-dk);margin-bottom:4px}
+    .card .loc{color:var(--muted);font-size:.96rem}
+    .card .when{margin-top:24px;font-family:var(--f-disp);font-size:1.5rem;color:var(--sage)}
+    .card .when small{display:block;font-family:var(--f-body);font-size:.82rem;color:var(--gold);margin-bottom:8px}
     .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
     .btn{display:inline-flex;align-items:center;gap:9px;cursor:pointer;text-decoration:none;position:relative;overflow:hidden;
-      font-family:var(--f-body);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;font-weight:400;
+      font-family:var(--f-body);font-size:.86rem;font-weight:500;
       padding:14px 28px;border:1px solid var(--sage);color:var(--sage-dk);background:transparent;transition:color .45s,border-color .45s}
     .btn::before{content:"";position:absolute;inset:0;background:var(--sage-dk);transform:translateY(101%);transition:transform .45s cubic-bezier(.2,.7,.2,1);z-index:-1}
     .btn:hover{color:var(--bg);border-color:var(--sage-dk)}
     .btn:hover::before{transform:translateY(0)}
-    .btn svg{width:15px;height:15px}
+    .btn svg{width:16px;height:16px}
     .btn.solid{background:var(--sage-dk);color:var(--bg);border-color:var(--sage-dk)}
     .btn.solid::before{background:var(--gold)}
     .btn.solid:hover{color:#fff}
 
     /* ---------- TIMELINE ---------- */
-    .timeline{max-width:560px;margin:0 auto;position:relative;padding-left:46px}
-    .timeline::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:1px;background:linear-gradient(var(--gold-lt),transparent);transform-origin:top;transform:scaleY(0);transition:transform 1.4s ease}
+    .timeline{max-width:560px;margin:0 auto;position:relative;padding-right:46px}
+    .timeline::before{content:"";position:absolute;right:9px;top:8px;bottom:8px;width:1px;background:linear-gradient(var(--gold-lt),transparent);transform-origin:top;transform:scaleY(0);transition:transform 1.4s ease}
     .timeline.lit::before{transform:scaleY(1)}
-    .tl{position:relative;padding-bottom:52px}
+    .tl{position:relative;padding-bottom:50px}
     .tl:last-child{padding-bottom:0}
-    .tl::before{content:"";position:absolute;left:-42px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:1.5px solid var(--gold);box-shadow:0 0 0 0 rgba(184,145,80,.5);transition:box-shadow .4s}
+    .tl::before{content:"";position:absolute;right:-42px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:1.5px solid var(--gold);box-shadow:0 0 0 0 rgba(184,145,80,.5);transition:box-shadow .4s}
     .tl.in::before{box-shadow:0 0 0 6px rgba(184,145,80,.14)}
-    .tl .tm{font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:5px}
-    .tl .ti{font-family:var(--f-disp);font-size:1.7rem;color:var(--sage-dk);line-height:1.1}
-    .tl .td{color:var(--muted);font-size:.96rem;margin-top:2px}
+    .tl .tm{font-size:.86rem;color:var(--gold);font-weight:600;margin-bottom:4px}
+    .tl .ti{font-family:var(--f-disp);font-weight:700;font-size:1.6rem;color:var(--sage-dk);line-height:1.3}
+    .tl .td{color:var(--muted);font-size:1rem;margin-top:2px}
 
     /* ---------- INFO grid ---------- */
     .info{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:900px;margin:0 auto}
@@ -185,40 +187,40 @@
     .icard:hover{transform:translateY(-8px);box-shadow:0 40px 84px -34px rgba(45,52,33,.6)}
     .icard svg.ic{width:48px;height:48px;color:var(--gold);margin:0 auto 20px;transition:transform .5s}
     .icard:hover svg.ic{transform:scale(1.12) rotate(-4deg)}
-    .icard h3{font-family:var(--f-disp);font-size:1.8rem;color:var(--sage-dk);margin-bottom:10px;font-weight:400}
-    .icard .acc{font-family:var(--f-disp);font-style:italic;font-size:1.2rem;color:var(--sage);margin-bottom:10px}
-    .icard p{color:var(--muted);font-size:.95rem;max-width:330px;margin:0 auto}
-    .bank{margin-top:18px;display:inline-block;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-dk);background:rgba(184,145,80,.14);border:1px solid rgba(184,145,80,.3);padding:9px 16px}
+    .icard h3{font-family:var(--f-disp);font-weight:700;font-size:1.7rem;color:var(--sage-dk);margin-bottom:10px}
+    .icard .acc{font-family:var(--f-disp);font-size:1.3rem;color:var(--sage);margin-bottom:10px}
+    .icard p{color:var(--muted);font-size:1rem;max-width:340px;margin:0 auto}
+    .bank{margin-top:18px;display:inline-block;font-size:.82rem;color:var(--sage-dk);background:rgba(184,145,80,.14);border:1px solid rgba(184,145,80,.3);padding:9px 16px}
 
     /* ---------- RSVP ---------- */
     .rsvp{max-width:600px;margin:0 auto}
     .toggle{display:flex;gap:14px;justify-content:center;margin-bottom:34px;flex-wrap:wrap}
-    .tg{flex:1;min-width:210px;cursor:pointer;padding:18px;text-align:center;background:var(--paper);border:1px solid rgba(184,145,80,.32);font-family:var(--f-disp);font-size:1.2rem;color:var(--sage-dk);transition:.4s}
+    .tg{flex:1;min-width:210px;cursor:pointer;padding:18px;text-align:center;background:var(--paper);border:1px solid rgba(184,145,80,.32);font-family:var(--f-disp);font-size:1.25rem;color:var(--sage-dk);transition:.4s}
     .tg:hover{border-color:var(--sage)}
     .tg.active{background:var(--sage-dk);color:var(--bg);border-color:var(--sage-dk);transform:translateY(-2px);box-shadow:var(--shadow)}
     .grid{display:grid;gap:20px}
-    .field label{display:block;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
-    .field input,.field textarea{width:100%;padding:14px 16px;border:1px solid rgba(184,145,80,.32);background:var(--paper);font-family:var(--f-body);font-weight:300;font-size:.96rem;color:var(--ink);transition:.25s}
+    .field label{display:block;font-size:.86rem;color:var(--gold);margin-bottom:8px}
+    .field input,.field textarea{width:100%;padding:14px 16px;border:1px solid rgba(184,145,80,.32);background:var(--paper);font-family:var(--f-body);font-weight:400;font-size:1rem;color:var(--ink);transition:.25s}
     .field input:focus,.field textarea:focus{outline:none;border-color:var(--sage);box-shadow:0 0 0 3px rgba(184,145,80,.12)}
     .field textarea{min-height:104px;resize:vertical}
-    .check{display:flex;align-items:center;gap:11px;font-size:.92rem;color:var(--muted)}
+    .check{display:flex;align-items:center;gap:11px;font-size:1rem;color:var(--muted)}
     .check input{width:18px;height:18px;accent-color:var(--sage-dk)}
     .rsvp .btn.solid{width:100%;justify-content:center;margin-top:6px;padding:17px}
     .hidden{display:none}
     .thanks{text-align:center;background:var(--paper);padding:56px 36px;box-shadow:var(--shadow);border:1px solid rgba(184,145,80,.3);position:relative;animation:scaleIn .8s ease both}
     .thanks::before{content:"";position:absolute;inset:12px;border:1px solid rgba(184,145,80,.4)}
-    .thanks .script{font-size:3.4rem;color:var(--gold);margin-bottom:10px}
-    .thanks p{color:var(--muted);max-width:420px;margin:0 auto}
+    .thanks .script{font-size:3rem;color:var(--gold);margin-bottom:10px}
+    .thanks p{color:var(--muted);max-width:440px;margin:0 auto}
 
     /* ---------- FOOTER ---------- */
     footer{position:relative;text-align:center;padding:90px 24px 56px;background:var(--sage-darker);color:var(--bg);overflow:hidden}
     footer .corner{color:var(--gold-lt);opacity:.35}
-    footer .fmono{width:96px;height:96px;margin:0 auto 22px;position:relative;display:flex;align-items:center;justify-content:center;animation:floatY 6s ease-in-out infinite}
+    footer .fmono{width:100px;height:100px;margin:0 auto 22px;position:relative;display:flex;align-items:center;justify-content:center;animation:floatY 6s ease-in-out infinite}
     footer .fmono .ring{position:absolute;inset:0;border:1px solid var(--gold-lt);border-radius:50%;opacity:.6}
-    footer .fmono span{font-family:var(--f-disp);font-size:1.5rem;letter-spacing:.04em}
-    footer .fnames{font-family:var(--f-script);font-size:3.2rem;color:var(--gold-lt);margin-bottom:8px}
-    footer .ftag{letter-spacing:.3em;text-transform:uppercase;font-size:.74rem;opacity:.85}
-    footer .fmeta{margin-top:24px;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;opacity:.5}
+    footer .fmono span{font-family:var(--f-disp);font-size:1.4rem}
+    footer .fnames{font-family:var(--f-script);font-weight:700;font-size:3rem;color:var(--gold-lt);margin-bottom:8px}
+    footer .ftag{font-size:.96rem;opacity:.85}
+    footer .fmeta{margin-top:22px;font-size:.8rem;opacity:.5}
   </style>
 </head>
 <body>
@@ -259,18 +261,18 @@
     <div class="hero-inner" id="hero-inner">
       <div class="crest">
         <span class="ring spin"></span><span class="ring"></span><span class="ring inner"></span>
-        <span class="mono">M<span class="amp">&amp;</span>A</span>
+        <span class="mono">م<span class="amp"> و </span>ع</span>
       </div>
-      <div class="eyebrow">We are getting married</div>
-      <h1 class="hero-names">Mira <span class="amp">&amp;</span> Azmi</h1>
-      <div class="hero-sub">12 September 2026</div>
-      <div class="hero-venue">Crystal Palace · Almoun, Lebanon</div>
+      <div class="eyebrow">سنتزوّج</div>
+      <h1 class="hero-names">ميرا<span class="amp">و</span>عزمي</h1>
+      <div class="hero-sub">١٢ أيلول ٢٠٢٦</div>
+      <div class="hero-venue">كريستال بالاس · المون، لبنان</div>
 
       <div class="countdown">
-        <div class="cd"><div class="cd-num" id="cd-d">--</div><div class="cd-lab">Days</div></div>
-        <div class="cd"><div class="cd-num" id="cd-h">--</div><div class="cd-lab">Hours</div></div>
-        <div class="cd"><div class="cd-num" id="cd-m">--</div><div class="cd-lab">Minutes</div></div>
-        <div class="cd"><div class="cd-num" id="cd-s">--</div><div class="cd-lab">Seconds</div></div>
+        <div class="cd"><div class="cd-num" id="cd-d">--</div><div class="cd-lab">يوم</div></div>
+        <div class="cd"><div class="cd-num" id="cd-h">--</div><div class="cd-lab">ساعة</div></div>
+        <div class="cd"><div class="cd-num" id="cd-m">--</div><div class="cd-lab">دقيقة</div></div>
+        <div class="cd"><div class="cd-num" id="cd-s">--</div><div class="cd-lab">ثانية</div></div>
       </div>
     </div>
 
@@ -282,8 +284,8 @@
   <!-- ============ QUOTE ============ -->
   <section class="quote">
     <div class="wrap reveal">
-      <p>“With all the love in our hearts, we invite you to share in the day we begin our forever.”</p>
-      <span class="by">Mira &amp; Azmi</span>
+      <p>«بكلّ ما في قلبَينا من حبّ، ندعوكم لمشاركتنا اليوم الذي نبدأ فيه حكايتنا الأبديّة.»</p>
+      <span class="by">ميرا وعزمي</span>
     </div>
   </section>
 
@@ -293,8 +295,8 @@
       <div class="frame">
         <div class="ph" id="photo-ph">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5-5L5 19"/></svg>
-          <div class="t">Mira &amp; Azmi</div>
-          <div class="s">Drop a photo.jpg in this folder to feature your picture here</div>
+          <div class="t">ميرا وعزمي</div>
+          <div class="s">ضَعوا صورة باسم photo.jpg في المجلّد لتظهر هنا</div>
         </div>
       </div>
     </div>
@@ -304,22 +306,22 @@
   <section>
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">Everything you need to know</span>
-        <h2 class="stitle">The Details</h2>
+        <span class="eyebrow">كلّ ما تودّون معرفته</span>
+        <h2 class="stitle">التفاصيل</h2>
         <div class="flourish"><span class="line"></span><svg><use href="#leaf-rule"/></svg><span class="line"></span></div>
       </div>
       <div class="card reveal">
-        <div class="venue">Crystal Palace</div>
-        <div class="loc">Almoun, Lebanon</div>
-        <div class="when"><small>The Celebration</small>Friday, 12 September 2026 · 8:00 PM</div>
+        <div class="venue">كريستال بالاس</div>
+        <div class="loc">المون، لبنان</div>
+        <div class="when"><small>الاحتفال</small>السبت ١٢ أيلول ٢٠٢٦ · الساعة ٨:٠٠ مساءً</div>
         <div class="btn-row">
           <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Crystal+Palace+Almoun+Lebanon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            Google Maps
+            الموقع على الخريطة
           </a>
           <a class="btn solid" id="cal-btn" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-            Add to Calendar
+            أضيفوا إلى التقويم
           </a>
         </div>
       </div>
@@ -330,16 +332,16 @@
   <section>
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">What we have planned for you</span>
-        <h2 class="stitle">Order of the Day</h2>
+        <span class="eyebrow">ما أعددناه لكم</span>
+        <h2 class="stitle">برنامج اليوم</h2>
         <div class="flourish"><span class="line"></span><svg><use href="#leaf-rule"/></svg><span class="line"></span></div>
       </div>
       <div class="timeline" id="timeline">
-        <div class="tl reveal"><div class="tm">8:00 PM</div><div class="ti">Arrival &amp; Welcome Drinks</div><div class="td">Reception and welcome cocktails as guests arrive.</div></div>
-        <div class="tl reveal"><div class="tm">8:45 PM</div><div class="ti">Ceremony</div><div class="td">The most special moment of the day.</div></div>
-        <div class="tl reveal"><div class="tm">9:30 PM</div><div class="ti">Cocktail Hour &amp; Dinner</div><div class="td">Al fresco dining under the stars.</div></div>
-        <div class="tl reveal"><div class="tm">11:00 PM</div><div class="ti">Party</div><div class="td">Let's dance the night away.</div></div>
-        <div class="tl reveal"><div class="tm">Late</div><div class="ti">Last Dance</div><div class="td">One final song to close a perfect night.</div></div>
+        <div class="tl reveal"><div class="tm">٨:٠٠ مساءً</div><div class="ti">الوصول وكوكتيل الترحيب</div><div class="td">استقبال الضيوف مع مشروبات الترحيب.</div></div>
+        <div class="tl reveal"><div class="tm">٨:٤٥ مساءً</div><div class="ti">مراسم الزفاف</div><div class="td">أجمل لحظات اليوم.</div></div>
+        <div class="tl reveal"><div class="tm">٩:٣٠ مساءً</div><div class="ti">الكوكتيل والعشاء</div><div class="td">عشاء في الهواء الطلق تحت النجوم.</div></div>
+        <div class="tl reveal"><div class="tm">١١:٠٠ مساءً</div><div class="ti">الحفلة</div><div class="td">لنرقص حتى الصباح.</div></div>
+        <div class="tl reveal"><div class="tm">في وقتٍ متأخّر</div><div class="ti">الرقصة الأخيرة</div><div class="td">أغنية أخيرة تختم ليلةً لا تُنسى.</div></div>
       </div>
     </div>
   </section>
@@ -348,23 +350,23 @@
   <section>
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">Good to know</span>
-        <h2 class="stitle">Your Questions Answered</h2>
+        <span class="eyebrow">معلومات مفيدة</span>
+        <h2 class="stitle">أسئلتكم وأجوبتها</h2>
         <div class="flourish"><span class="line"></span><svg><use href="#leaf-rule"/></svg><span class="line"></span></div>
       </div>
       <div class="info">
         <div class="icard reveal">
           <svg class="ic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 6h18l-1.6 13.2A2 2 0 0 1 17.4 21H6.6a2 2 0 0 1-2-1.8L3 6Z"/><path d="M8 6V4a4 4 0 0 1 8 0v2"/></svg>
-          <h3>Dress Code</h3>
-          <div class="acc">Formal Attire</div>
-          <p>We kindly ask you to dress formally to join us on this very special day. Please avoid wearing white — it is reserved for the bride.</p>
+          <h3>قواعد اللباس</h3>
+          <div class="acc">لباس رسمي</div>
+          <p>نرجو منكم اعتماد اللباس الرسمي لمشاركتنا هذا اليوم المميّز. ونرجو تجنّب اللون الأبيض، فهو مخصّص للعروس.</p>
         </div>
         <div class="icard reveal">
           <svg class="ic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18M12 8v13M12 8S9 2 6.5 4 12 8 12 8ZM12 8s3-6 5.5-4S12 8 12 8Z"/></svg>
-          <h3>A Thoughtful Gesture</h3>
-          <div class="acc">Your presence is the greatest gift of all</div>
-          <p>On the wedding day you may hand us a card or envelope in person, or arrange a bank transfer if you prefer.</p>
-          <span class="bank">Bank details available on request</span>
+          <h3>لفتة كريمة</h3>
+          <div class="acc">حضوركم أجمل هديّة</div>
+          <p>في يوم الزفاف يمكنكم تقديم بطاقة أو ظرف باليد، أو إجراء تحويل مصرفي إن رغبتم.</p>
+          <span class="bank">تفاصيل الحساب المصرفي عند الطلب</span>
         </div>
       </div>
     </div>
@@ -374,34 +376,34 @@
   <section>
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">We hope you can make it</span>
-        <h2 class="stitle">RSVP</h2>
+        <span class="eyebrow">نتمنّى أن تكونوا معنا</span>
+        <h2 class="stitle">تأكيد الحضور</h2>
         <div class="flourish"><span class="line"></span><svg><use href="#leaf-rule"/></svg><span class="line"></span></div>
       </div>
 
       <form class="rsvp reveal" id="rsvp-form">
         <div class="toggle">
-          <div class="tg active" id="yes">Yes, I'll be there</div>
-          <div class="tg" id="no">Sorry, I can't make it</div>
+          <div class="tg active" id="yes">نعم، سأحضر</div>
+          <div class="tg" id="no">للأسف لن أتمكّن من الحضور</div>
         </div>
         <div class="grid">
-          <div class="field"><label for="fullname">Full name</label><input id="fullname" type="text" placeholder="Your full name" required /></div>
+          <div class="field"><label for="fullname">الاسم الكامل</label><input id="fullname" type="text" placeholder="اسمكم الكامل" required /></div>
           <div id="att" class="grid">
-            <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" placeholder="Contact phone number" /></div>
-            <div class="field"><label for="diet">Dietary requirements / allergies</label><input id="diet" type="text" placeholder="Let us know of any allergies" /></div>
-            <div class="field"><label for="comp">Companions</label><input id="comp" type="text" placeholder="Names of anyone joining you" /></div>
-            <div class="field"><label for="acc">Hotel / accommodation / area</label><input id="acc" type="text" placeholder="Where you'll be staying" /></div>
-            <div class="field"><label for="song">Song request</label><input id="song" type="text" placeholder="A song to get you dancing" /></div>
-            <label class="check"><input id="transport" type="checkbox" /> I need transport to the venue</label>
+            <div class="field"><label for="phone">رقم الهاتف</label><input id="phone" type="tel" placeholder="رقم هاتف للتواصل" /></div>
+            <div class="field"><label for="diet">متطلّبات غذائية / حساسية</label><input id="diet" type="text" placeholder="أخبرونا بأي حساسية لديكم" /></div>
+            <div class="field"><label for="comp">المرافقون</label><input id="comp" type="text" placeholder="أسماء من سيرافقونكم" /></div>
+            <div class="field"><label for="acc">الفندق / مكان الإقامة / المنطقة</label><input id="acc" type="text" placeholder="أين ستقيمون" /></div>
+            <div class="field"><label for="song">أغنية تطلبونها</label><input id="song" type="text" placeholder="أغنية تدفعكم إلى الرقص" /></div>
+            <label class="check"><input id="transport" type="checkbox" /> أحتاج إلى وسيلة نقل إلى مكان الحفل</label>
           </div>
-          <div class="field"><label for="msg">Message for the couple (optional)</label><textarea id="msg" placeholder="Write us a few words..."></textarea></div>
-          <button type="submit" class="btn solid">Send RSVP</button>
+          <div class="field"><label for="msg">رسالة للعروسَين (اختياري)</label><textarea id="msg" placeholder="اكتبوا لنا بعض الكلمات..."></textarea></div>
+          <button type="submit" class="btn solid">إرسال التأكيد</button>
         </div>
       </form>
 
       <div class="thanks hidden" id="thanks">
-        <div class="script">Thank you</div>
-        <p id="thanks-msg">We're thrilled to know you'll be joining us on this very special day.</p>
+        <div class="script">شكراً لكم</div>
+        <p id="thanks-msg">يسعدنا كثيراً أنّكم ستشاركوننا هذا اليوم المميّز.</p>
       </div>
     </div>
   </section>
@@ -410,13 +412,16 @@
   <footer>
     <svg class="corner tl"><use href="#branch"/></svg>
     <svg class="corner tr"><use href="#branch"/></svg>
-    <div class="fmono"><span class="ring"></span><span>M&amp;A</span></div>
-    <div class="fnames">Mira &amp; Azmi</div>
-    <div class="ftag">Thank you for being part of our story</div>
-    <div class="fmeta">12 September 2026 · Crystal Palace · Almoun, Lebanon</div>
+    <div class="fmono"><span class="ring"></span><span>م و ع</span></div>
+    <div class="fnames">ميرا وعزمي</div>
+    <div class="ftag">شكراً لكونكم جزءاً من قصّتنا</div>
+    <div class="fmeta">١٢ أيلول ٢٠٢٦ · كريستال بالاس · المون، لبنان</div>
   </footer>
 
   <script>
+    /* convert Western digits to Arabic-Indic numerals */
+    function ar(s){return String(s).replace(/[0-9]/g,function(d){return "٠١٢٣٤٥٦٧٨٩"[+d];});}
+
     /* ---- hero photo: hide layer until a real hero.jpg exists ---- */
     (function(){
       var img=document.getElementById("hero-photo");
@@ -446,11 +451,11 @@
     /* ---- countdown (Lebanon time, UTC+3 in September) ---- */
     var TARGET=new Date("2026-09-12T20:00:00+03:00").getTime();
     var pad=function(n){return n<10?"0"+n:""+n;};
-    var last={};
     function put(id,val){
       var el=document.getElementById(id);
-      if(el.textContent!==String(val)){
-        el.textContent=val;
+      var t=ar(val);
+      if(el.textContent!==t){
+        el.textContent=t;
         el.classList.remove("tickk");void el.offsetWidth;el.classList.add("tickk");
       }
     }
@@ -477,12 +482,12 @@
     document.getElementById("cal-btn").addEventListener("click",function(e){
       e.preventDefault();
       var ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Mira and Azmi//Wedding//EN","BEGIN:VEVENT",
-        "DTSTART:20260912T170000Z","DTEND:20260913T020000Z","SUMMARY:Mira & Azmi - Wedding",
-        "LOCATION:Crystal Palace, Almoun, Lebanon","DESCRIPTION:We are getting married! Join us to celebrate.",
+        "DTSTART:20260912T170000Z","DTEND:20260913T020000Z","SUMMARY:زفاف ميرا وعزمي",
+        "LOCATION:كريستال بالاس، المون، لبنان","DESCRIPTION:سنتزوّج! شاركونا فرحتنا.",
         "END:VEVENT","END:VCALENDAR"].join("\r\n");
       var a=document.createElement("a");
-      a.href=URL.createObjectURL(new Blob([ics],{type:"text/calendar"}));
-      a.download="mira-and-azmi-wedding.ics"; a.click();
+      a.href=URL.createObjectURL(new Blob([ics],{type:"text/calendar;charset=utf-8"}));
+      a.download="mira-azmi-wedding.ics"; a.click();
     });
 
     /* ---- rsvp ---- */
@@ -495,8 +500,8 @@
       this.classList.add("hidden");
       var t=document.getElementById("thanks");
       document.getElementById("thanks-msg").textContent=attending
-        ?"We're thrilled to know you'll be joining us on this very special day."
-        :"We're so sorry you can't join us. You'll be in our thoughts on this very special day.";
+        ?"يسعدنا كثيراً أنّكم ستشاركوننا هذا اليوم المميّز."
+        :"يؤسفنا أنّكم لن تتمكّنوا من الحضور. ستكونون في قلوبنا في هذا اليوم المميّز.";
       t.classList.remove("hidden"); t.scrollIntoView({behavior:"smooth",block:"center"});
     });
 
